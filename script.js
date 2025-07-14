@@ -73,16 +73,39 @@
 
 // SNACK 7
 
-const eseguiEferma = (mess, inizio, fine) => {
-    return function () {
-        const intervalloID = setInterval(() => {
-            console.log(mess);
-        }, inizio);
-        setTimeout(() => {
-            clearInterval(intervalloID);
-        }, fine);
-    };
-};
+// const eseguiEferma = (mess, inizio, fine) => {
+//     return function () {
+//         const intervalloID = setInterval(() => {
+//             console.log(mess);
+//         }, inizio);
+//         setTimeout(() => {
+//             clearInterval(intervalloID);
+//         }, fine);
+//     };
+// };
 
-const valori = eseguiEferma('Ciao Mondo!!', 2000, 10000);
-valori();
+// const valori = eseguiEferma('Ciao Mondo!!', 2000, 10000);
+// valori();
+
+
+// SNACK 8
+
+
+const contoAllaRovescia = (num) => {
+    return function () {
+        const timerValue = setInterval(function () {
+            if (num != 0) {
+                num--;
+                console.log(num)
+            }
+            else {
+                clearInterval(timerValue)
+                console.log('Tempo scaduto!')
+            }
+
+        }, 1000)
+    }
+}
+
+const numerino = contoAllaRovescia(12)
+numerino()
