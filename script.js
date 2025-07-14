@@ -15,6 +15,7 @@
 //     return a + b;
 // }
 
+
 // // SNACK 2
 
 // const quadrato = (n) => n * n;
@@ -29,6 +30,7 @@
 
 // console.log(eseguiOperazione(60, 20, sottrazione))
 // console.log(eseguiOperazione(10, 28, moltiplicazione))
+
 
 // // SNACK 4
 
@@ -71,6 +73,7 @@
 // const valore = creaContatoreAutomatico(3000);
 // valore()
 
+
 // SNACK 7
 
 // const eseguiEferma = (mess, inizio, fine) => {
@@ -90,22 +93,39 @@
 
 // SNACK 8
 
+// const contoAllaRovescia = (num) => {
+//     return function () {
+//         const timerValue = setInterval(function () {
+//             if (num != 0) {
+//                 num--;
+//                 console.log(num)
+//             }
+//             else {
+//                 clearInterval(timerValue)
+//                 console.log('Tempo scaduto!')
+//             }
 
-const contoAllaRovescia = (num) => {
-    return function () {
-        const timerValue = setInterval(function () {
-            if (num != 0) {
-                num--;
-                console.log(num)
-            }
-            else {
-                clearInterval(timerValue)
-                console.log('Tempo scaduto!')
-            }
+//         }, 1000)
+//     }
+// }
 
-        }, 1000)
-    }
-}
+// const numerino = contoAllaRovescia(12)
+// numerino()
 
-const numerino = contoAllaRovescia(12)
-numerino()
+
+// SNACK 9
+
+const sequenzaOperazioni = (operazioni, intervallo) => {
+    operazioni.forEach((operazione, index) => {
+        setTimeout(() => {
+            operazione();
+        }, intervallo * index);
+    });
+};
+
+
+sequenzaOperazioni([
+    () => console.log("Operazione 1"),
+    () => console.log("Operazione 2"),
+    () => console.log("Operazione 3")
+], 2000);
