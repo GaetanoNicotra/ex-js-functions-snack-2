@@ -53,3 +53,20 @@ const stampaOgniSecondo = (mess) => {
 }
 
 const messaggio = stampaOgniSecondo('Benvenuto in JavaScript')
+
+
+//SNACK 6
+
+let counter = 0;
+
+const creaContatoreAutomatico = (ms) => {
+    return function () {
+        setInterval(function () {
+            counter = counter + 1;
+            console.log(counter)
+        }, ms)
+    }
+}
+
+const valore = creaContatoreAutomatico(3000);
+valore()
