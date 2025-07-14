@@ -42,3 +42,14 @@ const creaTimer = (ms) => {
 
 const timer = creaTimer(2000);
 timer()
+
+
+// SNACK 5 
+
+const stampaOgniSecondo = (mess) => {
+    return setInterval(function () {
+        console.log(mess)
+    }, 1000)
+}
+
+const messaggio = stampaOgniSecondo('Benvenuto in JavaScript')
