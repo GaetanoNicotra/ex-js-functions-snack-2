@@ -97,14 +97,13 @@ const contoAllaRovescia = (num) => {
     return function () {
         const timerValue = setInterval(function () {
             if (num != 0) {
-                num--;
                 console.log(num)
+                num--;
             }
             else {
-                clearInterval(timerValue)
                 console.log('Tempo scaduto!')
+                clearInterval(timerValue)
             }
-
         }, 1000)
     }
 }
@@ -132,7 +131,6 @@ sequenzaOperazioni([
 
 
 // SNACK 10
-
 
 const creaThrottler = (funzione, tempo) => {
     return setInterval(() => {
